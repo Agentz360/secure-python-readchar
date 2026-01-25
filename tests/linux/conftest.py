@@ -8,7 +8,7 @@ if sys.platform.startswith("linux"):
 
 
 # ignore all tests in this folder if not on linux
-def pytest_ignore_collect(path, config):
+def pytest_ignore_collect(collection_path, config):
     if not sys.platform.startswith("linux"):
         return True
 
